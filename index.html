@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pixiv画廊</title>
+    <link rel="stylesheet" href="./main.css">
+
+</head>
+<body onselect="return false">
+
+<div class="wrap" id="wrap">
+    <!--负责平移旋转-->
+    <div class="photo  photo_front"  id="photo_{{index}}" onclick="turn(this)">
+        <!--photo-wrap负责翻转-->
+        <div class="photo-wrap">
+            <div class="side side-front">
+                <p class="image"><img src="images/{{img}}" ></p>
+                <p class="caption">{{caption}}</p>
+            </div>
+            <div class="side side-back">
+                <p class="desc">{{desc}}/p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="./images/data.js"></script>
+<script type="text/javascript" src="control.js"></script>
+</body>
+</html>
